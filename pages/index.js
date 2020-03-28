@@ -3,22 +3,21 @@ import gql from "graphql-tag";
 import Head from "next/head";
 import { withApollo } from "../lib/apollo";
 import HabitsList from "../components/HabitsList";
+import Loader from "../components/Loader";
 
-const QUERY = gql`
+const GET_HABITS = gql`
   query {
-    sayHello
+    habits {
+      id
+      name
+    }
   }
 `;
 
 const Home = () => {
-  const { data } = useQuery(QUERY);
-  const [habits, setHabits] = React.useState([
-    "sleep well",
-    "Good day",
-    "Have Fun",
-    "Eaatwell",
-    "Go to Gym"
-  ]);
+  const { data, loading } = useQuery(GET_HABITS);
+  if (loading) return <Loader />;
+  const { habits } = data;
   return (
     <section className="home">
       <Head>

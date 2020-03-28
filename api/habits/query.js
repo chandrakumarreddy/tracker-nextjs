@@ -1,7 +1,9 @@
+import HabitModel from "./habit";
+
 export default {
   Query: {
-    habits: () => {
-      return [];
+    async habits() {
+      return HabitModel.find({});
     }
   }
 };

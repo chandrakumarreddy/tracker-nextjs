@@ -1,7 +1,13 @@
+import HabitModel from "./habit";
+
 export default {
   Mutation: {
-    addHabit(_, { input }) {
-      console.log(input);
+    async addHabit(_, { input }) {
+      try {
+        return await HabitModel.create({ ...input });
+      } catch (error) {
+        console.log(error);
+      }
     }
   }
 };

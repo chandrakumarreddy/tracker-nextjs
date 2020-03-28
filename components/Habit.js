@@ -4,7 +4,7 @@ export default function Habit({ habit }) {
   const dates = getLast5Days();
   return (
     <article className="habit">
-      <h1>{habit}</h1>
+      <h1>{habit.name}</h1>
       <div className="habit__dates">
         {dates.map(_date => (
           <HabitButton key={_date.getTime()} date={_date} />

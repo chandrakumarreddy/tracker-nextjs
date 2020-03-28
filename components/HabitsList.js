@@ -4,7 +4,7 @@ export default function HabitsList({ habits }) {
   return (
     <section className="habitsList container">
       {habits.map(_habit => (
-        <Habit key={_habit} habit={_habit} />
+        <Habit key={_habit.id} habit={_habit} />
       ))}
       <style jsx>{`
         .habitsList {
