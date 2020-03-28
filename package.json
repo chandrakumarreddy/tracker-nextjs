@@ -14,10 +14,12 @@
     "apollo-cache-inmemory": "^1.6.5",
     "apollo-link-http": "^1.5.16",
     "apollo-server-micro": "^2.11.0",
+    "dotenv": "^8.2.0",
     "graphql": "^14.6.0",
     "graphql-tag": "^2.10.3",
     "isomorphic-fetch": "^2.2.1",
     "next": "9.3.2",
+    "nextjs-progressbar": "^0.0.4",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   }

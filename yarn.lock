@@ -2854,6 +2854,11 @@ dot-prop@^5.0.0:
   dependencies:
     is-obj "^2.0.0"
 
+dotenv@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
+  integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
+
 duplexer@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
@@ -4616,6 +4621,13 @@ next@9.3.2:
     webpack-hot-middleware "2.25.0"
     webpack-sources "1.4.3"
 
+nextjs-progressbar@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/nextjs-progressbar/-/nextjs-progressbar-0.0.4.tgz#f7580fd517703301dad7eb0893fbed5c9686c840"
+  integrity sha512-t+feT48KBDaysRH+snX3ARmYnAdViHhKSxXIXI4eK97SrVOJN+pHl+/IVUV1Oq1ZM34KEx4TZ7iHl3p7aXrMRA==
+  dependencies:
+    nprogress "^0.2.0"
+
 node-fetch@2.6.0, node-fetch@^2.1.2, node-fetch@^2.2.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
@@ -4706,6 +4718,11 @@ normalize-url@1.9.1:
     prepend-http "^1.0.0"
     query-string "^4.1.0"
     sort-keys "^1.0.0"
+
+nprogress@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
+  integrity sha1-y480xTIT2JVyP8urkH6UIq28r7E=
 
 num2fraction@^1.2.2:
   version "1.2.2"
