@@ -1,9 +1,13 @@
-import Layout from "../components/Layout";
+import Head from "next/head";
+import React from "react";
 
 export default function About() {
   return (
-    <Layout>
+    <React.Fragment>
+      <Head>
+        <title>About</title>
+      </Head>
       <h1>About</h1>
-    </Layout>
+    </React.Fragment>
   );
 }

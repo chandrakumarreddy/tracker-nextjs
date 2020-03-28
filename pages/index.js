@@ -1,7 +1,8 @@
 import { useQuery } from "@apollo/react-hooks";
 import gql from "graphql-tag";
+import Head from "next/head";
 import { withApollo } from "../lib/apollo";
-import Layout from "../components/Layout";
+import HabitsList from "../components/HabitsList";
 
 const QUERY = gql`
   query {
@@ -10,13 +11,26 @@ const QUERY = gql`
 `;
 
 const Home = () => {
-  const { data, loading } = useQuery(QUERY);
-  if (loading) return null;
-  console.log(data);
+  const [habits, setHabits] = React.useState([
+    "sleep well",
+    "Good day",
+    "Have Fun",
+    "Eaatwell",
+    "Go to Gym"
+  ]);
   return (
-    <Layout>
-      <h1>Home page</h1>
-    </Layout>
+    <section className="home">
+      <Head>
+        <title>Home</title>
+      </Head>
+      <h1 className="home__title">Track your Habits here</h1>
+      <HabitsList habits={habits} />
+      <style jsx>{`
+        .home__title {
+          text-align: center;
+        }
+      `}</style>
+    </section>
   );
 };
 

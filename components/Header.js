@@ -3,13 +3,37 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <React.Fragment>
+    <nav className="header">
       <Link href="/">
-        <a>Home</a>
+        <a className="header__brand">Tracker</a>
       </Link>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </React.Fragment>
+      <div>
+        <Link href="/add-habit">
+          <a>Add Habit</a>
+        </Link>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+      </div>
+      <style jsx>{`
+        .header {
+          display: flex;
+          box-sizing: border-box;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #333;
+          padding: 10px 16px;
+        }
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+        .header__brand {
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+      `}</style>
+    </nav>
   );
 }
