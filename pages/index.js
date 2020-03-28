@@ -11,6 +11,7 @@ const QUERY = gql`
 `;
 
 const Home = () => {
+  const { data } = useQuery(QUERY);
   const [habits, setHabits] = React.useState([
     "sleep well",
     "Good day",

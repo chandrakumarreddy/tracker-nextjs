@@ -1,4 +1,5 @@
 import { ApolloServer, gql } from "apollo-server-micro";
+import connectDB from "../../lib/mongodb";
 
 const typeDefs = gql`
   type Query {
@@ -21,4 +22,6 @@ export const config = {
 };
 
 const apolloServer = new ApolloServer({ typeDefs, resolvers });
-export default apolloServer.createHandler({ path: "/api/graphql" });
+const server = apolloServer.createHandler({ path: "/api/graphql" });
+
+export default connectDB(server);
