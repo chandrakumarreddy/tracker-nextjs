@@ -1,9 +1,9 @@
-import ClipLoader from "react-spinners/ClipLoader";
+import ClockLoader from "react-spinners/ClockLoader";
 
 export default function Loader() {
   return (
     <div className="loader flex-center">
-      <ClipLoader size={150} color={"#123abc"} />
+      <ClockLoader size={150} color={"#123abc"} />
       <style jsx>{`
         .loader {
           width: 100vw;

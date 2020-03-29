@@ -8,6 +8,12 @@ export default {
       } catch (error) {
         console.log(error);
       }
+    },
+    async addEvent(_, { habitId, date }) {
+      console.log("add event");
+    },
+    async removeEvent(_, { habitId, eventId }) {
+      console.log("remove event");
     }
   }
 };
