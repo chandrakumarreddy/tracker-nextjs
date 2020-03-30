@@ -10,10 +10,26 @@ export default {
       }
     },
     async addEvent(_, { habitId, date }) {
-      console.log("add event");
+      date.setHours(0, 0, 0, 0);
+      return await HabitModel.findByIdAndUpdate(
+        {
+          _id: habitId,
+          "events.date": {
+            $ne: date
+          }
+        },
+        { $addToSet: { events: { date } } },
+        { upsert: true }
+      );
     },
     async removeEvent(_, { habitId, eventId }) {
-      console.log("remove event");
+      return await HabitModel.findByIdAndUpdate(
+        {
+          _id: habitId
+        },
+        { $pull: { events: { _id: eventId } } },
+        { upsert: true }
+      );
     }
   }
 };

@@ -7,7 +7,7 @@ export default function Habit({ habit }) {
       <h1>{habit.name}</h1>
       <div className="habit__dates">
         {dates.map(_date => (
-          <HabitButton key={_date.getTime()} date={_date} />
+          <HabitButton key={_date.getTime()} date={_date} habit={habit} />
         ))}
       </div>
       <style jsx>

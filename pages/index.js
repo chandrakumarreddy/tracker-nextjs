@@ -1,18 +1,10 @@
 import { useQuery } from "@apollo/react-hooks";
-import gql from "graphql-tag";
+
 import Head from "next/head";
 import { withApollo } from "../lib/apollo";
 import HabitsList from "../components/HabitsList";
 import Loader from "../components/Loader";
-
-const GET_HABITS = gql`
-  query {
-    habits {
-      id
-      name
-    }
-  }
-`;
+import { GET_HABITS } from "../graphql/queries";
 
 const Home = () => {
   const { data, loading } = useQuery(GET_HABITS);
